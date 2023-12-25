@@ -15,7 +15,7 @@ export default function RegisterAndLoginForm() {
     setId(data.id);
   }
   return (
-    <div className="bg-fuchsia-600 h-screen flex items-center">
+    <div className="bg-sky-300 h-screen flex items-center">
       <form className="w-64 mx-auto mb-12" onSubmit={handleSubmit}>
       <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
@@ -37,7 +37,7 @@ export default function RegisterAndLoginForm() {
                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
       </div>
         
-        <button className="bg-pink-500 hover:bg-white-700 border-white-400 text-white font-bold py-2 px-4 rounded">
+        <button className="bg-blue-500 hover:bg-cyan-600 border-white-400 text-white font-bold py-2 px-4 rounded">
           {isLoginOrRegister === 'register' ? 'Register' : 'Login'}
         </button>
         <div className="text-center mt-2">
@@ -45,7 +45,7 @@ export default function RegisterAndLoginForm() {
             <div>
               Already a member?
               <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-3 border border-gray-400 rounded shadow" onClick={() => setIsLoginOrRegister('login')}>
-                Login here
+                Login
               </button>
             </div>
           )}
@@ -59,6 +59,7 @@ export default function RegisterAndLoginForm() {
           )}
         </div>
       </form>
+      <span class="absolute block text-center inset-x-0 bottom-4">Made with <span class='love'>❤</span> by Mainak😊</span>
     </div>
   );
 }
